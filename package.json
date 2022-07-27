@@ -1,0 +1,25 @@
+{
+    "name": "alphashell",
+    "displayName": "AlphaShell",
+    "description": "Syntax Highlighting for AlphaShell",
+    "version": "0.1.0",
+    "engines": {
+        "vscode": "^1.69.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "alphashell",
+            "aliases": ["AlphaShell", "alphashell", "ash", "αsh"],
+            "extensions": [".ash"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "alphashell",
+            "scopeName": "source.alphashell",
+            "path": "./syntaxes/alphashell.tmLanguage.json"
+        }]
+    }
+}

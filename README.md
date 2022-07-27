@@ -1,0 +1,1 @@
+Syntax Highlighting for [AlphaShell](https://github.com/Maneren/AlphaShell) in VSCode.

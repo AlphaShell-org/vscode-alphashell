@@ -1,0 +1,99 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "AlphaShell",
+	"patterns": [
+		{ "include": "#keywords" },
+		{ "include": "#comments" },
+		{ "include": "#names" },
+		{ "include": "#literals" },
+		{ "include": "#operators" },
+		{ "include": "#strings" }
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.alphashell",
+				"match": "\\b(let|export|for|in|while|if|elif|else|import|source|fn|return)\\b"
+			}]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.alphashell",
+					"begin": "//",
+					"end": "\\n"
+				},
+				{
+					"name": "comment.block.empty.alphashell",
+					"match": "/\\*\\*/"
+				},
+				{
+					"name": "comment.block.alphashell",
+					"begin": "/\\*",
+					"end": "\\*/"
+				}
+			]
+		},
+		"literals": {
+			"patterns": [
+				{
+					"name": "constant.numeric.alphashell",
+					"match": "\\d+(?:\\.\\d+)?"
+				}
+			]
+		},
+		"operators": {
+			"patterns": [
+				{
+					"name": "keyword.operator.comparison.alphashell",
+					"match": "(<=|>=|<|>|==|~=|!=)"
+				},
+				{
+					"name": "keyword.operator.other.alphashell",
+					"match": "(&|\\.\\.|\\||=)"
+				},
+				{
+					"name": "keyword.operator.arithmetic.alphashell",
+					"match": "(\\+|\\-|\\*|/|%)"
+				},
+				{
+					"name": "punctuation.alphashell",
+					"match": "(;|,)"
+				}
+			]
+		},
+		"names": {
+			"patterns": [
+				{
+					"name": "entity.name.function.alphashell",
+					"match": "([A-Za-z_]\\w*|\\$)\\s*\\("
+				},
+				{
+					"name": "variable.name.alphashell",
+					"match": "([A-Za-z_]\\w*|@)"
+				}
+			]
+		},
+		"strings": {
+			"patterns": [
+				{
+					"name": "string.quoted.double.alphashell",
+					"begin": "\"",
+					"end": "\"",
+					"patterns": [
+						{
+							"name": "constant.character.escape.alphashell",
+							"match": "\\\\."
+						}
+					]
+				},
+				{
+					"name": "string.quoted.single.alphashell",
+					"begin": "'",
+					"end": "'"
+				}
+			]
+		}
+	},
+	"scopeName": "source.alphashell"
+}
