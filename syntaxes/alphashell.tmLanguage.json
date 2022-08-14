@@ -11,10 +11,16 @@
 	],
 	"repository": {
 		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.alphashell",
-				"match": "\\b(let|export|for|in|while|if|elif|else|import|source|fn|return|external|true|false)\\b"
-			}]
+			"patterns": [
+				{
+					"name": "keyword.control.alphashell",
+					"match": "\\b(let|export|for|in|while|if|elif|else|import|source|fn|return|external)\\b"
+				},
+				{
+					"name": "constant.language.alphashell",
+					"match": "\\b(true|false)\\b"
+				}
+			]
 		},
 		"comments": {
 			"patterns": [
