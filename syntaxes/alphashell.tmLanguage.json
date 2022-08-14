@@ -13,7 +13,7 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.alphashell",
-				"match": "\\b(let|export|for|in|while|if|elif|else|import|source|fn|return)\\b"
+				"match": "\\b(let|export|for|in|while|if|elif|else|import|source|fn|return|external|true|false)\\b"
 			}]
 		},
 		"comments": {
